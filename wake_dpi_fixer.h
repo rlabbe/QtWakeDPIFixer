@@ -4,6 +4,7 @@
 #include <QAbstractNativeEventFilter>
 #include <QByteArray>
 #include <QPointer>
+#include <QRect>
 #include <vector>
 
 class QWidget;
@@ -36,8 +37,9 @@ private:
     struct SavedWindow {
         QPointer<QWidget> widget;
         QByteArray geometry;
+        QRect rect;
         double dpr {1.0};
-        bool restored {false};
+        int stable_ticks {0};
     };
 
     void on_suspend();
