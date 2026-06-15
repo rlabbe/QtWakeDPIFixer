@@ -59,6 +59,8 @@
     <ClCompile>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;QT_STATIC;$(Qt_DEFINES_);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary Condition="'$(Configuration)'=='Debug'">MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)'!='Debug'">MultiThreaded</RuntimeLibrary>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
