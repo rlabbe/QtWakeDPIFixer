@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="wake_dpi_fixer.cpp" />
+    <QtRcc Include="QtWakeDpiFixer.qrc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="wake_dpi_fixer.h" />
